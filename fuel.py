@@ -15,5 +15,12 @@ def process():
 
     percentage = (x/y)*100
 
+    if percentage <= 1:
+        print('E')
+    elif percentage >= 99:
+        print('F')
+    else:
+        print(f'{round(percentage)}%')
+
 if __name__ == "__main__":
     main()
