@@ -1,6 +1,6 @@
 def main():
     while True:
-        fraction = input('Fraction: ').strip()
+        fraction = input("Fraction: ").strip()
         try:
             process(fraction)
             break
@@ -9,27 +9,26 @@ def main():
         continue
 
 
-
-
 def process(fraction):
     while True:
-        s = fraction.split('/')
+        s = fraction.split("/")
         x = int(s[0])
         y = int(s[1])
 
         if x > y:
-            fraction = input('Fraction: ').strip()
+            fraction = input("Fraction: ").strip()
         else:
             break
 
-    percentage = (x/y)*100
+    percentage = (x / y) * 100
 
     if percentage <= 1:
-        print('E')
+        print("E")
     elif percentage >= 99:
-        print('F')
+        print("F")
     else:
-        print(f'{round(percentage)}%')
+        print(f"{round(percentage)}%")
+
 
 if __name__ == "__main__":
     main()
