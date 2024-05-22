@@ -2,7 +2,8 @@ def main():
     fraction = input('Fraction: ').strip()
 
 
-def process():
+
+def process(fraction):
     while True:
         s = fraction.split('/')
         x = int(s[0])
