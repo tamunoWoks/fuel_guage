@@ -1,5 +1,13 @@
 def main():
-    fraction = input('Fraction: ').strip()
+    while True:
+        fraction = input('Fraction: ').strip()
+        try:
+            process(fraction)
+            break
+        except (ValueError, ZeroDivisionError):
+            pass
+        continue
+
 
 
 
