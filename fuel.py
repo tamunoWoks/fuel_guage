@@ -2,14 +2,14 @@ def main():
     while True:
         fraction = input("Fraction: ").strip()
         try:
-            process(fraction)
+            print(guage(convert(fraction)))
             break
         except (ValueError, ZeroDivisionError):
-            pass
+            raise
         continue
 
 
-def process(fraction):
+def convert(fraction):
     while True:
         s = fraction.split("/")
         x = int(s[0])
@@ -21,13 +21,16 @@ def process(fraction):
             break
 
     percentage = (x / y) * 100
+    return percentage
+
+def guage(percentage):
 
     if percentage <= 1:
-        print("E")
+        return "E"
     elif percentage >= 99:
-        print("F")
+        return "F"
     else:
-        print(f"{round(percentage)}%")
+        return (f"{round(percentage)}%")
 
 
 if __name__ == "__main__":
