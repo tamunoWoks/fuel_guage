@@ -1,7 +1,7 @@
 def main():
     while True:
         try:
-            print(gauge(convert(input('Fraction: '))))
+            print(gauge(convert(input("Fraction: "))))
             break
         except (ValueError, ZeroDivisionError):
             continue
@@ -14,7 +14,10 @@ def convert(fraction):
         raise ZeroDivisionError
     if int(x) > int(y):
         raise ValueError
-    return int(int(x)/int(y) * 100)
+    
+    percentage = int((x/y) * 100)
+    return percentage
+
 
 def gauge(percentage):
     try:
@@ -22,10 +25,8 @@ def gauge(percentage):
             return "E"
         elif percentage >= 99:
             return "F"
-        elif 1 < percentage < 99:
-            return percentage + '%'
         else:
-            raise TypeError
+            return str(percentage) + '%'
     except TypeError:
         pass
 
