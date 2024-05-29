@@ -16,8 +16,8 @@ def convert(fraction):
         raise ZeroDivisionError
     if x > y:
         raise ValueError
-    
-    percentage = int((float(x)/y) * 100)
+
+    percentage = int((float(x) / y) * 100)
     return percentage
 
 
@@ -27,7 +27,7 @@ def gauge(percentage):
     elif percentage >= 99:
         return "F"
     else:
-            return "{}%".format(percentage)
+        return "{}%".format(percentage)
 
 
 if __name__ == "__main__":
